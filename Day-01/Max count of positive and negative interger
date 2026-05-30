@@ -1,0 +1,28 @@
+class Solution {
+    public int maximumCount(int[] nums) {
+
+        int firstPositive = lowerBound(nums, 1);
+        int firstZero = lowerBound(nums, 0);
+
+        int neg = firstZero;
+        int pos = nums.length - firstPositive;
+
+        return Math.max(neg, pos);
+    }
+
+    private int lowerBound(int[] nums, int target) {
+        int left = 0, right = nums.length;
+
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+
+            if (nums[mid] >= target) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return left;
+    }
+}
