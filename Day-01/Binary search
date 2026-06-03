@@ -14,7 +14,7 @@ class Solution {
                 s = mid+1;
                 
                 }
-                
+             
             }
             
         
