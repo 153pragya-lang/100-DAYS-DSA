@@ -1,4 +1,4 @@
-class MinStack {
+class MinStack{
     private Stack<Integer> st;
     private Stack<Integer> min;
 
