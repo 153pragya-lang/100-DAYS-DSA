@@ -23,7 +23,7 @@ class Solution {
             }else{
                 ans[p3]=val2;
                 p2++;
-            }
+     }
             p3++;
         }
             return ans;
